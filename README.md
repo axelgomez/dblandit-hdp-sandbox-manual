@@ -65,10 +65,10 @@ Finalmente, ya se podrán ejecutar `hdfs` y `hive`
 
 ## Adicionales
 Para saber si hdfs inició correctamente hay que dirigirse a la siguiente url en un navegador dentro de la máquina virtual:
-[http://127.0.0.1:50070]
+[http://127.0.0.1:50070](http://127.0.0.1:50070)
 
 O conociendo la IP de la máquina (por medio del comando `ifconfig` dentro de la virtual) dirigirse (desde la máquina local) a:
-[http://<IP_maquina_virtual>:50070]
+[http://<IP_maquina_virtual>:50070](http://<IP_maquina_virtual>:50070)
 reemplazando <IP_maquina_virtual> por la IP correspondiente
 
 
