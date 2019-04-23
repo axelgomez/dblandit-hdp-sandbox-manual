@@ -6,7 +6,7 @@
 /home/hadoop/Desktop/curso/bin/start.sh
 ```
 
-Luego aparecerá algo como esto:
+Deberá devolver algo similar a:
 ```
 hadoop@hadoop-ml:~$ /home/hadoop/Desktop/curso/bin/start.sh
 No arguments provided. Starting all daemons
@@ -33,13 +33,14 @@ org.apache.spark.deploy.worker.Worker running as process 2711.  Stop it first.
 Aquí ya se podrá interactuar con HDFS y HIVE
 
 ## Agregar
-Para poder correr los binarios de HDFS o HIVE (o cualquier otro que se prefiera) se deberá tener en el PATH de linux los directorios que incluyen esos binarios que queremos ejecutar. Para que simplemente ejecutando `hdfs` o `hive` o cualquier binario que utilicemos dentro de hadoop (`sqoop`, `pyspark`, etc....) deberemos:
-- Comprobar si los binarios están dentro del PATH, en tal caso si ejecutáramos:
+Para poder correr los binarios de HDFS o HIVE (o cualquier otro que se prefiera) se deberá tener en el PATH de linux los directorios que incluyen esos binarios que queremos ejecutar.
+Para que simplemente ejecutando `hdfs` o `hive` o cualquier binario que se utilice dentro de hadoop (`sqoop`, `pyspark`, etc....) se deberá comprobar si los binarios están dentro del PATH:
+- En tal caso, al ejecutar:
 ```
 hdfs
 ```
 
-La salida deberá ser:
+La salida será:
 ```
 hadoop@hadoop-ml:~$ hdfs
 Usage: hdfs [--config confdir] [--loglevel loglevel] COMMAND
@@ -51,11 +52,11 @@ Usage: hdfs [--config confdir] [--loglevel loglevel] COMMAND
   ...
 ```
 
-Si, en caso contrartio, diera el siguiente error:
+- En caso contrario, si el error fuese:
 ```
 hdfs: command not found
 ```
-- ejecutar la siguiente linea por consola:
+    - ejecutar la siguiente linea por consola:
 ```
 echo "export PATH=$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH" >> ~/.bashrc
 ```
@@ -63,7 +64,7 @@ echo "export PATH=$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH" >> ~/.bashrc
 Finalmente, ya se podrán ejecutar `hdfs` y `hive`
 
 ## Adicionales
-Para saber si hdfs inició correctamente pueden dirigirse a la siguiente url en un navegador dentro de la máquina virtual:
+Para saber si hdfs inició correctamente hay que dirigirse a la siguiente url en un navegador dentro de la máquina virtual:
 http://127.0.0.1:50070
 
 O conociendo la IP de la máquina (por medio del comando `ifconfig` dentro de la virtual) dirigirse (desde la máquina local) a:
@@ -71,4 +72,4 @@ http://<IP_maquina_virtual>:50070
 reemplazando <IP_maquina_virtual> por la IP correspondiente
 
 
-Última modificación el 23 de Abril de 2019 a las 16:05:22hs por Axel Gómez
+Última edición el 23 de Abril de 2019 a las 16:05:22hs por [Axel Gómez](https://www.github.com/axelgomez)
