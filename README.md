@@ -73,4 +73,3 @@ reemplazando <IP_maquina_virtual> por la IP correspondiente
 
 
 Última edición el 23 de Abril de 2019 a las 16:05:22hs por [Axel Gómez](https://www.github.com/axelgomez)
-
