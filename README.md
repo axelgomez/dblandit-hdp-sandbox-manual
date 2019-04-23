@@ -58,7 +58,7 @@ hdfs: command not found
 ```
 - ejecutar la siguiente linea por consola:
 ```
-echo "export PATH=$HADOOP_HOME/bin:$HIVE_HOME/bin:$PATH" >> ~/.bashrc
+echo "export PATH=\$HADOOP_HOME/bin:\$HIVE_HOME/bin:\$PATH" >> ~/.bashrc
 ```
 
 Finalmente, ya se podrán ejecutar `hdfs` y `hive`
