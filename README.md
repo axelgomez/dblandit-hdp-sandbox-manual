@@ -61,6 +61,11 @@ hdfs: command not found
 echo "export PATH=\$HADOOP_HOME/bin:\$HIVE_HOME/bin:\$PATH" >> ~/.bashrc
 ```
 
+Activamos los cambios hechos al bashrc
+```
+source ~/.bashrc
+```
+
 Finalmente, ya se podrán ejecutar `hdfs` y `hive`
 
 ## Para agregar Pig
