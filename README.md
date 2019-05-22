@@ -32,7 +32,7 @@ org.apache.spark.deploy.worker.Worker running as process 2711.  Stop it first.
 ```
 Aquí ya se podrá interactuar con HDFS y HIVE
 
-## Agregar
+## Agregar binarios al path
 Para poder correr los binarios de HDFS o HIVE (o cualquier otro que se prefiera) se deberá tener en el PATH de linux los directorios que incluyen esos binarios que queremos ejecutar.
 Para que simplemente ejecutando `hdfs` o `hive` o cualquier binario que se utilice dentro de hadoop (`sqoop`, `pyspark`, etc....) se deberá comprobar si los binarios están dentro del PATH:
 - En tal caso, al ejecutar:
@@ -63,13 +63,32 @@ echo "export PATH=\$HADOOP_HOME/bin:\$HIVE_HOME/bin:\$PATH" >> ~/.bashrc
 
 Finalmente, ya se podrán ejecutar `hdfs` y `hive`
 
-## Adicionales
+## Para agregar Pig
+Ejecutar desde la consola:
+```
+cd ~/Desktop/curso/ && wget http://apache.dattatec.com/pig/pig-0.16.0/pig-0.16.0.tar.gz
+tar -xvf pig-0.16.0.tar.gz
+```
+
+Ahora, agregamos el path del binario de pig:
+
+```
+echo "export PIG_HOME=/home/hadoop/Desktop/curso/pig-0.16.0" >> ~/.bashrc
+echo "export PATH=\$PIG_HOME/bin:\$PATH" >> ~/.bashrc
+```
+
+Activamos los cambios hechos al bashrc
+```
+source ~/.bashrc
+```
+
+Finalmente, ya se podrá ejecutar `pig`
+
+
+## Extras
 Para saber si hdfs inició correctamente hay que dirigirse a la siguiente url en un navegador dentro de la máquina virtual:
 [http://127.0.0.1:50070](http://127.0.0.1:50070)
 
 O conociendo la IP de la máquina (por medio del comando `ifconfig` dentro de la virtual) dirigirse (desde la máquina local) a:
 [http://<IP_maquina_virtual>:50070](http://<IP_maquina_virtual>:50070)
 reemplazando <IP_maquina_virtual> por la IP correspondiente
-
-
-Última edición el 23 de Abril de 2019 a las 16:05:22hs por [Axel Gómez](https://www.github.com/axelgomez)
